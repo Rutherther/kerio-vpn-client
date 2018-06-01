@@ -22,6 +22,10 @@ It is important to use the propagation flag shared.
 
 ## Configuration
 
+Mountpoint is used as samba server. All the available shares will be mounted. 
+They will be located at `/mnt/(server)/(share)`.
+Note: You can't mount just some shares from the server yet.
+
     sudo docker run -it -v ${PWD}/mountpoint:/mnt:shared -d kerio-vpn-client <server> <username> <password> <domain> <mountpoint-1> [mountpoint-2] [mountpoint-x..]
 
 ## Known Issues
