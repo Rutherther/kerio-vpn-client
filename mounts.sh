@@ -14,6 +14,7 @@ for NAMES in $SHARES; do
   MOUNTPOINT=$MOUNT/$NAMES
   mkdir -p $MOUNTPOINT
 
+  echo "mount -t cifs -ocredentials=$AUTHFILE,iocharset=utf8,file_mode=0777,dir_mode=0777 $FULLPATH $MOUNTPOINT"
   mount -t cifs -o credentials=$AUTHFILE,iocharset=utf8,file_mode=0777,dir_mode=0777 $FULLPATH $MOUNTPOINT
 
 done
